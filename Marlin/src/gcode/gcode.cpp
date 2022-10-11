@@ -1093,6 +1093,11 @@ void GcodeSuite::process_parsed_command(const bool no_ok/*=false*/) {
 
     case 'T': T(parser.codenum); break;                           // Tn: Tool Change
 
+    case 'U': switch (parser.codenum) {
+      case 3: U3(); break;
+      case 4: U4(); break;
+    }
+
     #if ENABLED(MARLIN_DEV_MODE)
       case 'D': D(parser.codenum); break;                         // Dn: Debug codes
     #endif

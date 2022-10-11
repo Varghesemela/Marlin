@@ -1242,6 +1242,8 @@ private:
   #endif
 
   static void T(const int8_t tool_index);
+  static void U3();
+  static void U4();
 
 };
 
